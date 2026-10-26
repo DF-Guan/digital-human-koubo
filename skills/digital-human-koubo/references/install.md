@@ -11,7 +11,10 @@
 - 报「disabled in connector settings」→ 不是没装，是某个工具被关了：让用户在连接器设置里把它打开。
 - 报未登录 / 授权过期 → 不用重装，重新登录授权就行（Claude 连接器点「Connect」；Codex `codex mcp login renoise`）。
 
-### 装法（先有 renoise.ai 账号；全部走浏览器登录授权，不用复制 API key）
+### 装法（先有 Renoise 账号；全部走浏览器登录授权，不用复制 API key）
+
+还没有账号 → 先去注册：**[https://renoise.ai/mcp?utm_medium=xcom&utm_source=official](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)**（给用户时原样给这条链接，保留 utm 追踪参数，不要改写成 renoise.ai 首页）。
+
 | 用的是 | 怎么装 |
 |---|---|
 | **Claude 桌面端 / claude.ai 网页** | 设置 → 连接器（Connectors）→ Add custom connector → 名称 `Renoise`，地址 `https://renoise.ai/api/public/mcp` → 继续 → 登录 renoise.ai 点同意 |
