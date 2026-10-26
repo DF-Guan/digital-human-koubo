@@ -9,7 +9,7 @@ Script, lip-synced AI presenter, voice clean-up, captions, and pro-YouTuber-styl
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
 ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-orange)
-![Renoise MCP](https://img.shields.io/badge/video-Renoise%20MCP-ff7a1a)
+[![Renoise MCP](https://img.shields.io/badge/video-Renoise%20MCP-ff7a1a)](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)
 ![Remotion](https://img.shields.io/badge/edit-Remotion%204-0b84f3)
 
 <img src="docs/images/cover.jpg" width="820" alt="One photo + one sentence → a 27-second livestream sales ad">
@@ -18,7 +18,7 @@ Script, lip-synced AI presenter, voice clean-up, captions, and pro-YouTuber-styl
 
 > This 27-second livestream ad has no real presenter. Face, voice, studio, captions and the price animation are all AI.
 > The only input was one sentence: *"Use this digital human to make a 30-second livestream ad for the WorkBuddy course — 10 lessons, ¥99, was ¥999."*
-> Total cost: **482 Renoise credits**.
+> Total cost: **482 [Renoise](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official) credits**.
 
 ---
 
@@ -50,7 +50,7 @@ Click a GIF (or "Watch") to play the full video. Every demo below was produced w
 ## What it does
 
 - **Digital human from one photo** — a fixed presenter (face, outfit, voice description, prompt template) stored in `persona.json`, so every video is the same person. Composite her into any scene (livestream studio, shop, classroom, Kyoto street) with GPT Image first, then make her talk.
-- **Lip-synced talking clips** — the script is split into ≤ 15-second segments and generated with **Grok Video 1.5** through **Renoise MCP**. Other models (Wan 3.0, OmniHuman for your own recording) are documented.
+- **Lip-synced talking clips** — the script is split into ≤ 15-second segments and generated with **Grok Video 1.5** through **[Renoise MCP](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)**. Other models (Wan 3.0, OmniHuman for your own recording) are documented.
 - **Cost gate** — the agent always quotes *segments · seconds · credits · balance* first and waits for your "yes". It generates segment 1 for you to check before batching the rest.
 - **Quality control** — every segment is transcribed with whisper and compared with the script, and 4 frames per segment are inspected (Grok sometimes burns subtitles into the picture; those segments get re-shot).
 - **Voice unification** — 1/3-octave spectral matching, de-essing, one shared small-room reverb and loudness normalisation, so 30 separately-generated clips sound like one recording (sibilance spread 13.2 dB → 5.9 dB in our tests).
@@ -127,7 +127,7 @@ cd skills && zip -r ../digital-human-skills.zip digital-human-koubo finance-expl
 
 ### 3 · Connect Renoise MCP (AI video / image generation)
 
-Create an account at **[renoise.ai](https://renoise.ai)** first. Login is in the browser — you never paste an API key.
+Create an account at **[renoise.ai](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)** first. Login is in the browser — you never paste an API key.
 
 | Agent | How |
 |---|---|
@@ -334,7 +334,7 @@ docs/                             README images, GIF previews, posters
 - **[Remotion](https://www.remotion.dev/)** is used for rendering and has its own license: free for individuals and companies of up to 3 people; larger companies need a [company license](https://www.remotion.pro/).
 - Animated emoji: [Google Noto Emoji Animation](https://googlefonts.github.io/noto-emoji-animation/) (CC BY 4.0) — credit "Animated emoji: Google Noto" in your videos.
 - Maps: [world-atlas](https://github.com/topojson/world-atlas) (ISC; data from Natural Earth, public domain) · [d3-geo](https://github.com/d3/d3-geo), [topojson-client](https://github.com/topojson/topojson-client) (ISC). For maps involving China's borders in formally published content, check against applicable local standards.
-- Speech recognition: [whisper.cpp](https://github.com/ggerganov/whisper.cpp) (MIT). Generation runs on [Renoise](https://renoise.ai) (your account, your credits); optional TTS by [Xiaomi MiMo](https://platform.xiaomimimo.com/).
+- Speech recognition: [whisper.cpp](https://github.com/ggerganov/whisper.cpp) (MIT). Generation runs on [Renoise](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official) (your account, your credits); optional TTS by [Xiaomi MiMo](https://platform.xiaomimimo.com/).
 - Course screenshots in the WorkBuddy demo come from the author's own course. Demo videos are the author's own work; please don't re-upload them as your own.
 
 See [THIRD_PARTY.md](THIRD_PARTY.md) for details.

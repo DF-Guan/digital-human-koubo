@@ -9,7 +9,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
 ![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-orange)
-![Renoise MCP](https://img.shields.io/badge/video-Renoise%20MCP-ff7a1a)
+[![Renoise MCP](https://img.shields.io/badge/video-Renoise%20MCP-ff7a1a)](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)
 ![Remotion](https://img.shields.io/badge/edit-Remotion%204-0b84f3)
 
 <img src="docs/images/cover.jpg" width="820" alt="一张照片 + 一句话，27 秒直播带货广告">
@@ -18,7 +18,7 @@
 
 > 这条 27 秒的直播间广告里，主播不存在。脸、声音、直播间、花字、价格动画，全是 AI 做的。
 > 输入只有一句话：「用这个数字人做一条 30 秒直播间广告，卖 WorkBuddy 上手课，10 节课 99 元，原价 999。」
-> 总共花了 **482 Renoise 积分**。
+> 总共花了 **482 [Renoise](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official) 积分**。
 
 ---
 
@@ -50,7 +50,7 @@
 ## 能做什么
 
 - **一张照片做出固定的数字人**：脸、服装、声音描述、提示词模板都存在 `persona.json`，每条片子都是同一个人。想进什么场景（直播间、门店、教室、京都街头），先用 GPT Image 合成开场画面，再让她开口。
-- **对口型的口播片段**：稿子切成 ≤ 15 秒一段，通过 **Renoise MCP** 用 **Grok Video 1.5** 生成。也写了 Wan 3.0、OmniHuman（用你自己的录音驱动口型）的用法。
+- **对口型的口播片段**：稿子切成 ≤ 15 秒一段，通过 **[Renoise MCP](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)** 用 **Grok Video 1.5** 生成。也写了 Wan 3.0、OmniHuman（用你自己的录音驱动口型）的用法。
 - **先报价，再花钱**：每次生成前，Agent 先报「段数 · 秒数 · 积分 · 余额」，你点头才开始；先拍第 1 段给你看，满意再批量。
 - **两道质检**：每段用 whisper 回听、和稿子比对；每段抽 4 帧检查（Grok 偶尔会自己往画面里烧字幕，有就重拍那段）。
 - **声音统一**：1/3 倍频程频谱匹配 + 去齿音 + 同一个小房间混响 + 响度统一，30 段分开生成的口播听起来像一次录完（实测齿音段间差 13.2 dB → 5.9 dB）。
@@ -127,7 +127,7 @@ cd skills && zip -r ../digital-human-skills.zip digital-human-koubo finance-expl
 
 ### 3 · 接入 Renoise MCP（AI 视频 / 图片生成）
 
-先去 **[renoise.ai](https://renoise.ai)** 注册账号。登录都在浏览器里完成，不用复制任何 API key。
+先去 **[renoise.ai](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)** 注册账号。登录都在浏览器里完成，不用复制任何 API key。
 
 | Agent | 怎么接 |
 |---|---|
@@ -334,7 +334,7 @@ docs/                             README 用的图片、GIF 预览、封面帧
 - 渲染用的 **[Remotion](https://www.remotion.dev/)** 有自己的许可：个人和 3 人以内的公司免费，更大的公司需要购买[公司授权](https://www.remotion.pro/)。
 - 动态表情：[Google Noto Emoji Animation](https://googlefonts.github.io/noto-emoji-animation/)（CC BY 4.0），视频里请署名「Animated emoji: Google Noto」。
 - 地图：[world-atlas](https://github.com/topojson/world-atlas)（ISC，数据来自 Natural Earth，公有领域）、[d3-geo](https://github.com/d3/d3-geo)、[topojson-client](https://github.com/topojson/topojson-client)（ISC）。涉及中国边界的正式发布内容，请按国内相关规范另行核对。
-- 语音识别：[whisper.cpp](https://github.com/ggerganov/whisper.cpp)（MIT）。生成走 [Renoise](https://renoise.ai)（用你自己的账号和积分）；可选 TTS 用 [小米 MiMo](https://platform.xiaomimimo.com/)。
+- 语音识别：[whisper.cpp](https://github.com/ggerganov/whisper.cpp)（MIT）。生成走 [Renoise](https://renoise.ai/mcp?utm_medium=xcom&utm_source=official)（用你自己的账号和积分）；可选 TTS 用 [小米 MiMo](https://platform.xiaomimimo.com/)。
 - WorkBuddy 示例里的课程截图来自作者自己的课程。示例视频是作者的作品，请不要当成自己的作品二次上传。
 
 详见 [THIRD_PARTY.md](THIRD_PARTY.md)。
